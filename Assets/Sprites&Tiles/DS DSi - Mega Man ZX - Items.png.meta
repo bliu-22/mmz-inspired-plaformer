@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 20064f2a649612d4aa70b09fada8ad6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2418652607026550769
+    second: DS DSi - Mega Man ZX - Items_0
+  - first:
+      213: -1130044338087064874
+    second: DS DSi - Mega Man ZX - Items_1
+  - first:
+      213: 3233322785397260203
+    second: DS DSi - Mega Man ZX - Items_2
+  - first:
+      213: 9115097955538943750
+    second: DS DSi - Mega Man ZX - Items_3
+  - first:
+      213: 4268784820932924025
+    second: DS DSi - Mega Man ZX - Items_4
+  - first:
+      213: 5848908640855346677
+    second: DS DSi - Mega Man ZX - Items_5
+  - first:
+      213: 7818255578223894322
+    second: DS DSi - Mega Man ZX - Items_6
+  - first:
+      213: 869052156480207790
+    second: DS DSi - Mega Man ZX - Items_7
+  - first:
+      213: -1225630890166213555
+    second: DS DSi - Mega Man ZX - Items_8
+  - first:
+      213: 6451228838224238837
+    second: DS DSi - Mega Man ZX - Items_9
+  - first:
+      213: 2415172457192767749
+    second: DS DSi - Mega Man ZX - Items_10
+  - first:
+      213: -8733356195568928603
+    second: DS DSi - Mega Man ZX - Items_11
+  - first:
+      213: 1993780647301927160
+    second: DS DSi - Mega Man ZX - Items_12
+  - first:
+      213: -1960278131564264243
+    second: DS DSi - Mega Man ZX - Items_13
+  - first:
+      213: 8277739113970208805
+    second: DS DSi - Mega Man ZX - Items_14
+  - first:
+      213: 5641200377003386249
+    second: DS DSi - Mega Man ZX - Items_15
+  - first:
+      213: -1290702085659299688
+    second: DS DSi - Mega Man ZX - Items_16
+  - first:
+      213: 1277718398785830397
+    second: DS DSi - Mega Man ZX - Items_17
+  - first:
+      213: 4892181393175480349
+    second: DS DSi - Mega Man ZX - Items_18
+  - first:
+      213: -8835186057655075889
+    second: DS DSi - Mega Man ZX - Items_19
+  - first:
+      213: 8714009610779786485
+    second: DS DSi - Mega Man ZX - Items_20
+  - first:
+      213: -7883010486736554411
+    second: DS DSi - Mega Man ZX - Items_21
+  - first:
+      213: 1118322957380972680
+    second: DS DSi - Mega Man ZX - Items_22
+  - first:
+      213: -1378285981401900413
+    second: DS DSi - Mega Man ZX - Items_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f082c1bb4483f6ed0800000000000000
+      internalID: -2418652607026550769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da01e769a64150f0800000000000000
+      internalID: -1130044338087064874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafb7c341f11fdc20800000000000000
+      internalID: 3233322785397260203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fb9c4fb455f7e70800000000000000
+      internalID: 9115097955538943750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_4
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972594a7d25cd3b30800000000000000
+      internalID: 4268784820932924025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 74
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd45e58b6f7b2150800000000000000
+      internalID: 5848908640855346677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_6
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 74
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f50478606008c60800000000000000
+      internalID: 7818255578223894322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 74
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab3a46f45e7f0c00800000000000000
+      internalID: 869052156480207790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 45
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44a5e5f23fadfee0800000000000000
+      internalID: -1225630890166213555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 46
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f89c13c27e578950800000000000000
+      internalID: 6451228838224238837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 46
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501484ebd8a648120800000000000000
+      internalID: 2415172457192767749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 49
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8382abfc2ecc680800000000000000
+      internalID: -8733356195568928603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_12
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 44
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0da7a6fe45bab10800000000000000
+      internalID: 1993780647301927160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 44
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc44523ec61bbc4e0800000000000000
+      internalID: -1960278131564264243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_14
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 46
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5201d87eddf60e270800000000000000
+      internalID: 8277739113970208805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 46
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9852612cad1994e40800000000000000
+      internalID: 5641200377003386249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 21
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890fb61aa41861ee0800000000000000
+      internalID: -1290702085659299688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 21
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd3c923d1e5bb110800000000000000
+      internalID: 1277718398785830397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 19
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d180005ae0584e340800000000000000
+      internalID: 4892181393175480349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_19
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 18
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb3cf4671d136580800000000000000
+      internalID: -8835186057655075889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_20
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc7edb72916ee870800000000000000
+      internalID: 8714009610779786485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_21
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 20
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55673617abbe99290800000000000000
+      internalID: -7883010486736554411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8807bdafdc4158f00800000000000000
+      internalID: 1118322957380972680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Mega Man ZX - Items_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 16
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a93afc3385fdce0800000000000000
+      internalID: -1378285981401900413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
