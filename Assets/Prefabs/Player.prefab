@@ -357,6 +357,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   gravity: 0
+  playerData: {fileID: 11400000, guid: 07428d5a68a777c4cb9410ed3d6949eb, type: 2}
   runVelocity: 5
   isRunning: 0
   canMove: 1
@@ -365,7 +366,6 @@ MonoBehaviour:
   minDashTime: 0.3
   remainingDashTime: 0
   dashVelocity: 6.5
-  xVel: 0
   canJump: 1
   jumpVel: 6
   fallMultiplier: 4
@@ -405,6 +405,8 @@ MonoBehaviour:
   isInvul: 0
   deathEffect: {fileID: 755476013436468199, guid: 6d250790763cfea4481d47bf830cc941,
     type: 3}
+  gameManager: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 07428d5a68a777c4cb9410ed3d6949eb, type: 2}
 --- !u!114 &1531617592
 MonoBehaviour:
   m_ObjectHideFlags: 0

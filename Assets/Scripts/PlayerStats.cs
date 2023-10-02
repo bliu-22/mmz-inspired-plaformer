@@ -10,20 +10,24 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float curHealth;
     [SerializeField] bool isInvul;
     [SerializeField] GameObject deathEffect;
+    [SerializeField] GameManager gameManager;
+    [SerializeField] PlayerDataStorage playerData;
     // Start is called before the first frame update
     void Start()
     {
         playercontroller = GetComponent<Player>();
         animator = GetComponent<Animator>();
-        curHealth = RoomSwitch.SpawnHealth;
+        curHealth = playerData.initialHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //for testing
         if (Input.GetKeyDown(KeyCode.T)) 
         {
-            TakeDamage(1);
+            Debug.Log(":");
+            TakeDamage(5);
         }
       
     }
@@ -52,8 +56,10 @@ public class PlayerStats : MonoBehaviour
         }
         if (curHealth <= 0)
         {
+            gameManager.triggerGameOver();
             GameObject deathEffectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            
         }
 
     }
@@ -85,10 +91,7 @@ public class PlayerStats : MonoBehaviour
             TakeDamage(1);
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("Door"))
-        {
-            RoomSwitch.SpawnHealth = curHealth;
-        }
+
     }
     private void DestroyPlayer()
     {

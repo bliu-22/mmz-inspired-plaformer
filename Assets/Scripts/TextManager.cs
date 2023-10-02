@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
-    TMPro.TextMeshProUGUI message;
+    //TMPro.TextMeshProUGUI message;
+    Text message;
     // Start is called before the first frame update
     void Start()
     {
-        message = GetComponent<TMPro.TextMeshProUGUI>();
+        message = GetComponent<Text>();
+       // message = GetComponent<TMPro.TextMeshProUGUI>();
     }
 
     // Update is called once per frame

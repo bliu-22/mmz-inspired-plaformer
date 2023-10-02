@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float gravity;
 
+    [Header("Transform")]
+    public PlayerDataStorage playerData;
 
     [Header("Horizontal Movement")]
     [SerializeField] float runVelocity = 5f;
@@ -71,8 +73,11 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         playerEffectController = GetComponent<PlayerEffectController>();
         sameSideWallJump.Normalize();
-        transform.position = RoomSwitch.SpawnPos;
-        transform.localScale = transform.localScale = new Vector2(RoomSwitch.FacingDirection, transform.localScale.y);
+
+        transform.position = playerData.initialPos;
+        transform.localScale = new Vector2(playerData.initialFacingDirection, transform.localScale.y);
+        //transform.position = RoomSwitch.SpawnPos;
+        //transform.localScale = transform.localScale = new Vector2(RoomSwitch.FacingDirection, transform.localScale.y);
         //Debug.Log(transform.position.ToString());
         
     }

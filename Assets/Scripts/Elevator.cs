@@ -62,7 +62,7 @@ public class Elevator : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            text.GetComponent<TextManager>().ChangeText("Press ↑ to use the elevator");
+            text.GetComponent<TextManager>().ChangeText("Press UP to use the elevator");
             //text.SetActive(true);
             text.GetComponent<TextManager>().EnableText();
 

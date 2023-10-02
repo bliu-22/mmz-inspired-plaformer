@@ -71,4 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSceneIndex: 1
-  spawnPos: {fileID: 0}
+  spawnPos: {x: -10, y: -0.9}
+  facingDirection: 1
+  playerData: {fileID: 11400000, guid: 07428d5a68a777c4cb9410ed3d6949eb, type: 2}
