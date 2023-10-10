@@ -44,15 +44,15 @@ I created a player trail prefab and recorded an animation that gradually decreas
 
 
 ### Syncing the firing and running animation
- 
+#### Managing variations within the run&fire state
 Since the motions are not skeleton based, there are 3 set of sprites for the run shoot cylcle. For each frame in the sequence, there is a variation where shot is fired and you can see the spark and the slide is pushed back, one where the slide is on its way returning, and finally one when it's returned. 
 ![Alt text](Screenshots/run_fire_sprite.png)  
 
 I decided to use a blend tree to handles the variation and I used a "time passed after shot fired" variable as the blend parameter.
 ![Alt text](Screenshots/run_shoot_blend.gif) 
 
-To make sure the player can transition smoothly into/out of firing state when running, the transition is handled manually by syncing the progress in the animation cycle. 
-
+#### Managing transitions between run state and run&fire state
+Run state and run&fire are two separate states so in order to make sure the player can transition smoothly into/out of firing state when running, the transition is handled manually in code by retrieving the current progress in the animation cycle and jumping to corresponding point in the target animation. \
 ![Alt text](Screenshots/screenshot4.gif) 
 
 
@@ -62,7 +62,7 @@ To make sure the player can transition smoothly into/out of firing state when ru
 ![Alt text](Screenshots/screenshot5.gif) 
 
 ## Room for improvements
-The player character initially only had very simple movements so most of the transitions were handled via a few condition checks and setting boolean variables to interact with the animator. However, as the complexity of the moveset increased, it became increasingly difficult to manage and result in hard to follow code and a spaghetti like animator. As I was writing the enemy character, I realized that writing a dedicated state machine in code for the behavior and lessening the reliance on the animator controller could be a feasible way to improve, though the player character has more variation in its states so it might need a bit more work. I'm planning on refactoring the player character entirely once I had explored more options.
+The player character initially only had very simple movements so most of the transitions were handled via a few condition checks and setting boolean variables to interact with the animator. However, as the complexity of the moveset increased, it became increasingly difficult to manage and result in hard to follow code and a spaghetti like animator. As I was writing the enemy character, I realized that writing a dedicated state machine in code for the behavior and lessening the reliance on the animator controller could be a feasible way to improve, though the player character has more variation in its states so it might need a bit more work to clearly plan out all the transition logic. I'm planning on refactoring the player character entirely once I had explored more options.
 ## References:
 Player sprite: \
 https://www.spriters-resource.com/ds_dsi/megamanzx/sheet/83/
