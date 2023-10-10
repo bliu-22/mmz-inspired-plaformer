@@ -36,9 +36,9 @@ For transition between scenes I used a scriptable object to perserve necessary d
 
 
 
-![Alt text](screenshots/screenshot1.gif) \
-![Alt text](screenshots/screenshot2.gif) \
-![Alt text](screenshots/screenshot3.gif) \
+![Alt text](Screenshots/screenshot1.gif) \
+![Alt text](Screenshots/screenshot2.gif) \
+![Alt text](Screenshots/screenshot3.gif) 
 ### Play trails when dashing
 I created a player trail prefab and recorded an animation that gradually decreases the sprite's alpha to 0. When player enters dash state, a trail object is instantiated for every set period of time, it retrives the current sprite and transform from the player object and renders the animation. When the animation plays to it's completion, it calls the destroy function so trails won't stack up. 
 
@@ -46,18 +46,20 @@ I created a player trail prefab and recorded an animation that gradually decreas
 ### Syncing the firing and running animation
  
 Since the motions are not skeleton based, there are 3 set of sprites for the run shoot cylcle. For each frame in the sequence, there is a variation where shot is fired and you can see the spark and the slide is pushed back, one where the slide is on its way returning, and finally one when it's returned. 
-![Alt text](screenshots/run_fire_sprite.png)  
+![Alt text](Screenshots/run_fire_sprite.png)  
 
 I decided to use a blend tree to handles the variation and I used a "time passed after shot fired" variable as the blend parameter.
-![Alt text](screenshots/run_shoot_blend.gif) \
-To make sure the player can transition smoothly into/out of firing state when running, the transition is handled manually by syncing the progress in the animation cycle. \
-![Alt text](screenshots/screenshot4.gif) \
+![Alt text](Screenshots/run_shoot_blend.gif) 
+
+To make sure the player can transition smoothly into/out of firing state when running, the transition is handled manually by syncing the progress in the animation cycle. 
+
+![Alt text](Screenshots/screenshot4.gif) 
 
 
 ### Enemey chasing
-![Alt text](screenshots/screenshot6.gif) \
-\
-![Alt text](screenshots/screenshot5.gif) \
+![Alt text](Screenshots/screenshot6.gif) 
+
+![Alt text](Screenshots/screenshot5.gif) 
 
 ## Room for improvements
 The player character initially only had very simple movements so most of the transitions were handled via a few condition checks and setting boolean variables to interact with the animator. However, as the complexity of the moveset increased, it became increasingly difficult to manage and result in hard to follow code and a spaghetti like animator. As I was writing the enemy character, I realized that writing a dedicated state machine in code for the behavior and lessening the reliance on the animator controller could be a feasible way to improve, though the player character has more variation in its states so it might need a bit more work. I'm planning on refactoring the player character entirely once I had explored more options.
