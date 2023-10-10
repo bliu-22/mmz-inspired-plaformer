@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
         //StartCoroutine(FlashOnHit());
         FlashOnHit();
         Invoke("ResetFlash", flashTimeOnHit);
-        rb.velocity = new Vector2(0f, 0.8f);
+    
         if (curHealth <= 0)
         {
             //animator.SetTrigger("death");

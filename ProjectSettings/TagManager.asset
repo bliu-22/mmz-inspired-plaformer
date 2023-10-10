@@ -8,6 +8,8 @@ TagManager:
   - Killzone
   - Bullet
   - Door
+  - PlayerBullet
+  - PopUpTrigger
   layers:
   - Default
   - TransparentFX

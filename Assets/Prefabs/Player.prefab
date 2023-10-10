@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &179531504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179531505}
+  m_Layer: 0
+  m_Name: PlayerRunBulletStartingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179531505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179531504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 0.555, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8885793828809463391}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438612970
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,6 +59,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8885793828809463391}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &502270621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502270622}
+  m_Layer: 0
+  m_Name: PlayerWallBulletStartingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &502270622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502270621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.915, y: 0.675, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8885793828809463391}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672131808
 GameObject:
@@ -174,11 +234,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416460813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.071, y: 0.604, z: 0}
+  m_LocalPosition: {x: 0.21, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8885793828809463391}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1789237490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789237491}
+  m_Layer: 0
+  m_Name: PlayerBulletStartingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789237491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789237490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 0.765, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8885793828809463391}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8885793828809463388
 GameObject:
@@ -221,6 +311,9 @@ Transform:
   - {fileID: 438612971}
   - {fileID: 1077804977}
   - {fileID: 672131809}
+  - {fileID: 1789237491}
+  - {fileID: 179531505}
+  - {fileID: 502270622}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -263,7 +356,7 @@ SpriteRenderer:
   m_SortingLayerID: 174564825
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6509957260416981788, guid: 02a337565b172604bbed19e17dea3b1d,
+  m_Sprite: {fileID: -8029267221825344120, guid: 02a337565b172604bbed19e17dea3b1d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -331,8 +424,8 @@ BoxCollider2D:
   m_Offset: {x: -0.028103828, y: 0.6057073}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47058824, y: 0}
-    oldSize: {x: 1.0625, y: 1.21875}
+    pivot: {x: 0.63414633, y: 0}
+    oldSize: {x: 1.28125, y: 1.3125}
     newSize: {x: 9.14, y: 25.677256}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -376,13 +469,23 @@ MonoBehaviour:
   isWallsliding: 0
   sameSideWallJump: {x: 1, y: 2}
   wallJumpForce: 6
+  firingCoolDown: 0.2
+  bulletSpeed: 8
+  firingDefaultDuraion: 0.5
+  firingExitCountdown: 0
+  fireDuration: 0
+  bulletStartingPos: {fileID: 1789237491}
+  bulletRunStartingPos: {fileID: 179531505}
+  bulletWallStartingPos: {fileID: 502270622}
+  playerBullet: {fileID: 8158885510676209567, guid: e94017ecfa76933488cf0cb4370b2fd4,
+    type: 3}
   duringCombo: 0
   groundSlashHitbox: {fileID: 1042585691}
   airSlashHitboxA: {fileID: 1388807116}
   airSlashHitboxB: {fileID: 1416460814}
   groundSlashSize: {x: 2, y: 1.4}
-  airSlashSizeA: {x: 1.5, y: 1.6}
-  airSlashSizeB: {x: 2, y: 2}
+  airSlashSizeA: {x: 2, y: 2}
+  airSlashSizeB: {x: 2.5, y: 2.2}
   groundRayA: {fileID: 438612971}
   groundRayB: {fileID: 672131809}
   wallRay: {fileID: 1077804977}

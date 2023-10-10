@@ -45,12 +45,27 @@ public class Player : MonoBehaviour
     [SerializeField] float wallJumpForce;
 
 
+    [Header("Firing")]
+
+    bool isFiring = false;
+    bool isStandFiring = false;
+    [SerializeField] float firingCoolDown = 0.2f;
+    [SerializeField] float bulletSpeed = 3;
+    [SerializeField] float firingDefaultDuraion = 0.5f;
+    [SerializeField] float firingExitCountdown;
+    [SerializeField] float fireDuration;
+    [SerializeField] Transform bulletStartingPos;
+    [SerializeField] Transform bulletRunStartingPos;
+    [SerializeField] Transform bulletWallStartingPos;
+    [SerializeField] GameObject playerBullet;
+
     [Header("MeleeAttack")]
     // grounded
     [SerializeField] bool duringCombo = false;
     bool groundSlashPressed;
     int comboCount;
     bool isDashSlashing;
+    [SerializeField] bool isOnSlope;
 
     // areial
     bool isAirSlashing;
@@ -76,8 +91,7 @@ public class Player : MonoBehaviour
 
         transform.position = playerData.initialPos;
         transform.localScale = new Vector2(playerData.initialFacingDirection, transform.localScale.y);
-        //transform.position = RoomSwitch.SpawnPos;
-        //transform.localScale = transform.localScale = new Vector2(RoomSwitch.FacingDirection, transform.localScale.y);
+
         //Debug.Log(transform.position.ToString());
         
     }
@@ -96,13 +110,14 @@ public class Player : MonoBehaviour
             WallSliding();
             FlipSprite();
             Jump();
+            Fire();
 
         }
         else 
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        // Dash() checks canMove inside the method
+
         Dash();
 
         HandleAnimation();
@@ -111,7 +126,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
             GroundCheck();
-            WallCheck(); 
+            WallCheck();
+ 
     }
 
     private void HandleAnimation() 
@@ -126,6 +142,9 @@ public class Player : MonoBehaviour
         animator.SetBool("isDashSlashing", isDashSlashing);
         animator.SetBool("isWallSlashing", isWallSlashing);
         animator.SetBool("canMove", canMove);
+        animator.SetBool("isFiring", isFiring);
+        animator.SetBool("isStandFiring", isStandFiring);
+        animator.SetFloat("fireDuration", fireDuration);
     }
 
     private void GroundCheck()
@@ -137,6 +156,7 @@ public class Player : MonoBehaviour
     {
             canWallSlide = rb.velocity.y < 0 && !isGrounded && Physics2D.Raycast(wallRay.position, Vector3.right * transform.localScale.x, wallRayLength, groundLayer);
     }
+
 
 
     private void HorizontalMovement() 
@@ -242,6 +262,8 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && (isGrounded || isWallsliding) && !isDashing && !duringCombo)
             {
+                isStandFiring = false;
+                isFiring = false;
                 isDashing = true;
                 rb.velocity = new Vector2(transform.localScale.x * dashVelocity, rb.velocity.y);
 
@@ -257,6 +279,7 @@ public class Player : MonoBehaviour
                 if (maxDashTime - remainingDashTime >= minDashTime)
                 {
                     isDashing = false;
+                    isFiring = false;
                     remainingDashTime = 0;
                     playerEffectController.DisableTrails();
                 }
@@ -295,6 +318,76 @@ public class Player : MonoBehaviour
         
     }
 
+    // FIRE
+    private void Fire() 
+    {
+        if (!duringCombo && !isAirSlashing && !isRoundSlashing) 
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                if (isGrounded && !isRunning)
+                {
+                    isStandFiring = true;
+                }
+                isFiring = true;
+                firingExitCountdown = firingDefaultDuraion;
+                // animation state transition
+                if (isRunning && !isDashing && !isWallsliding)
+                {
+                    float curAnimProgress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                    animator.Play("player_run_fire", 0, curAnimProgress);
+                }
+
+                
+                if (fireDuration >= firingCoolDown)
+                {
+                    fireDuration = 0;
+
+                    GameObject playerBulletInstance;
+
+                    if (isWallsliding)
+                    {
+                        playerBulletInstance = Instantiate(playerBullet, bulletWallStartingPos.position, Quaternion.identity);
+                        playerBulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(-1 * bulletSpeed * transform.localScale.x, 0);
+                        playerBulletInstance.transform.localScale = new Vector2(-1 * transform.localScale.x, playerBulletInstance.transform.localScale.y);
+                    }
+                    else
+                    {
+                        if (isDashing || isRunning)
+                        {
+                            playerBulletInstance = Instantiate(playerBullet, bulletRunStartingPos.position, Quaternion.identity);
+                        }
+                        else
+                        {
+                            playerBulletInstance = Instantiate(playerBullet, bulletStartingPos.position, Quaternion.identity);
+                        }
+
+                        playerBulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * transform.localScale.x, 0);
+                        playerBulletInstance.transform.localScale = new Vector2(transform.localScale.x, playerBulletInstance.transform.localScale.y);
+                    }
+
+                }
+
+            }
+
+            fireDuration += Time.deltaTime;
+            firingExitCountdown -= Time.deltaTime;
+            if (firingExitCountdown <= 0 && isFiring)
+            {
+                isStandFiring = false;
+                isFiring = false;
+                if (isRunning)
+                {
+                    float curAnimProgress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                    animator.Play("player_running", 0, curAnimProgress);
+                }
+            }
+
+        }
+
+    }
+
+
     // ATTACK
     // for ground triple slash combo
     private void StartComboWindow()
@@ -316,6 +409,7 @@ public class Player : MonoBehaviour
    
         if (isGrounded && !isDashing && Input.GetKeyDown(KeyCode.Z) && !groundSlashPressed)
         {
+            isStandFiring = false;
             groundSlashPressed = true;
             animator.SetTrigger(comboCount.ToString());
             duringCombo = true;
@@ -338,6 +432,7 @@ public class Player : MonoBehaviour
     }
     private void AerialSlash()
     {
+        
         // deal with the case where player landed before slash played to its end
         if (isGrounded) 
         {
@@ -346,17 +441,18 @@ public class Player : MonoBehaviour
 
         if (!isGrounded && !isWallSlashing && Input.GetKeyDown(KeyCode.Z))
         {
+            isFiring = false;
+
             if (Input.GetAxisRaw("Vertical") == -1)
             {
+                animator.SetTrigger("triggerRoundSlash");
                 isRoundSlashing = true;
+                
             } else 
             {
+                animator.SetTrigger("triggerAirSlash");
                 isAirSlashing = true;
             }   
-        }
-        if (!isGrounded && Input.GetKeyDown(KeyCode.Z) && Input.GetAxisRaw("Vertical") == -1)
-        {
-            isRoundSlashing = true;
         }
 
     }
