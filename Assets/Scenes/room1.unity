@@ -12425,7 +12425,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774566, y: 1}
+    m_SensorSize: {x: 1.7801418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12689,6 +12689,14 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1913006473}
+    - target: {fileID: 1917300002, guid: f365507175eb99e4c96390fb0d7468a3, type: 3}
+      propertyPath: materialDefault
+      value: 
+      objectReference: {fileID: 6200000, guid: a60f46b7918b738479876483dd3f9035, type: 2}
+    - target: {fileID: 1917300002, guid: f365507175eb99e4c96390fb0d7468a3, type: 3}
+      propertyPath: materialOnSlope
+      value: 
+      objectReference: {fileID: 6200000, guid: f10fd5935e2de4f4da8c9f838c5b49e5, type: 2}
     - target: {fileID: 8885793828809463388, guid: f365507175eb99e4c96390fb0d7468a3,
         type: 3}
       propertyPath: m_Name

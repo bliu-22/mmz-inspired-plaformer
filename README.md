@@ -5,7 +5,7 @@ A fun project I made as I learn to use Unity and exlore its features. I have alw
 
 I initially tought about recreating an entire stage from the original game but couldn't find the sprites. Then I thought since the focus was really on recreating the movements, I might as well just draw some tilesets and make my own level. It's mostly just simple blocks due to my lack of drawing skill but I tried to make it feel somewhat self-contained and have some verticality to resemble those metroidvania styled levels.
 
-The player character will slide on slopes due to physics simulation. One way I can think of to stop that is to do a raycast downwards and get the normal of the surface to see if the character is on a slope, and then restrict movements on x axis. 
+The player character will slide on slopes due to physics simulation. One way I can think of to stop that is to do a raycast downwards and get the normal of the surface to see if the character is on a slope, and then alter the friction accordingly. 
 
 For transition between scenes I used a scriptable object to perserve necessary data like player's health and spawn position. 
 

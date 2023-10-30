@@ -270,6 +270,36 @@ Transform:
   m_Father: {fileID: 8885793828809463391}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2009465348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009465349}
+  m_Layer: 0
+  m_Name: SlopeRay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2009465349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009465348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8885793828809463391}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8885793828809463388
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +344,7 @@ Transform:
   - {fileID: 1789237491}
   - {fileID: 179531505}
   - {fileID: 502270622}
+  - {fileID: 2009465349}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -356,7 +387,7 @@ SpriteRenderer:
   m_SortingLayerID: 174564825
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8029267221825344120, guid: 02a337565b172604bbed19e17dea3b1d,
+  m_Sprite: {fileID: -6509957260416981788, guid: 02a337565b172604bbed19e17dea3b1d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -424,8 +455,8 @@ BoxCollider2D:
   m_Offset: {x: -0.028103828, y: 0.6057073}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.63414633, y: 0}
-    oldSize: {x: 1.28125, y: 1.3125}
+    pivot: {x: 0.47058824, y: 0}
+    oldSize: {x: 1.0625, y: 1.21875}
     newSize: {x: 9.14, y: 25.677256}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -449,7 +480,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  gravity: 0
+  materialDefault: {fileID: 6200000, guid: a60f46b7918b738479876483dd3f9035, type: 2}
+  materialOnSlope: {fileID: 6200000, guid: f10fd5935e2de4f4da8c9f838c5b49e5, type: 2}
   playerData: {fileID: 11400000, guid: 07428d5a68a777c4cb9410ed3d6949eb, type: 2}
   runVelocity: 5
   isRunning: 0
@@ -480,6 +512,7 @@ MonoBehaviour:
   playerBullet: {fileID: 8158885510676209567, guid: e94017ecfa76933488cf0cb4370b2fd4,
     type: 3}
   duringCombo: 0
+  isOnSlope: 0
   groundSlashHitbox: {fileID: 1042585691}
   airSlashHitboxA: {fileID: 1388807116}
   airSlashHitboxB: {fileID: 1416460814}
@@ -489,6 +522,7 @@ MonoBehaviour:
   groundRayA: {fileID: 438612971}
   groundRayB: {fileID: 672131809}
   wallRay: {fileID: 1077804977}
+  slopeRay: {fileID: 2009465349}
   groundRayLength: 0.5
   wallRayLength: 0.5
 --- !u!114 &1531617585

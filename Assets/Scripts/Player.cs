@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     PlayerEffectController playerEffectController;
 
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] float gravity;
+    [SerializeField] PhysicsMaterial2D materialDefault, materialOnSlope;
 
     [Header("Transform")]
     public PlayerDataStorage playerData;
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [Header("Horizontal Movement")]
     [SerializeField] float runVelocity = 5f;
     [SerializeField] bool isRunning;
+    private float horizontalInput;
     public bool canMove = true;
     // made public for dash slashing check
     [SerializeField] public bool isDashing;
@@ -77,7 +78,7 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2 groundSlashSize, airSlashSizeA, airSlashSizeB;
 
     // ray
-    [SerializeField] Transform groundRayA, groundRayB, wallRay;
+    [SerializeField] Transform groundRayA, groundRayB, wallRay, slopeRay;
     [SerializeField] float groundRayLength, wallRayLength;
 
 
@@ -88,7 +89,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         playerEffectController = GetComponent<PlayerEffectController>();
         sameSideWallJump.Normalize();
-
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         transform.position = playerData.initialPos;
         transform.localScale = new Vector2(playerData.initialFacingDirection, transform.localScale.y);
 
@@ -99,7 +100,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         if (canMove) 
         {
             HorizontalMovement();
@@ -127,7 +128,8 @@ public class Player : MonoBehaviour
     {
             GroundCheck();
             WallCheck();
- 
+            SlopeCheck();
+            HandleSlope();
     }
 
     private void HandleAnimation() 
@@ -158,11 +160,39 @@ public class Player : MonoBehaviour
     }
 
 
+    private void SlopeCheck() 
+    {
+        RaycastHit2D hit = Physics2D.Raycast(slopeRay.position, Vector2.down, groundRayLength, groundLayer);
+        if (hit && isGrounded) 
+        {
+            if (hit.normal.normalized != new Vector2(0, 1))
+            {
+                isOnSlope = true;
+            }
+            else { isOnSlope = false; }
+        } else
+        {
+            isOnSlope = false;
+        }
+    }
+
+    private void HandleSlope()
+    {
+        if (isOnSlope && horizontalInput == 0)
+        {
+            rb.sharedMaterial = materialOnSlope;
+        }
+        else 
+        {
+            rb.sharedMaterial = materialDefault;
+        }
+    }
+
 
     private void HorizontalMovement() 
     {
 
-            var horizontalInput = Input.GetAxisRaw("Horizontal");
+            //var horizontalInput = Input.GetAxisRaw("Horizontal");
 
 
             if (duringCombo)
@@ -191,8 +221,8 @@ public class Player : MonoBehaviour
     }
     private void WallSliding()
     {
-        var horizontalMovement = Input.GetAxisRaw("Horizontal");
-        if (canWallSlide && horizontalMovement == transform.localScale.x)
+        //var horizontalMovement = Input.GetAxisRaw("Horizontal");
+        if (canWallSlide && horizontalInput == transform.localScale.x)
         {
             rb.velocity = new Vector2(rb.velocity.x, wallSlideVelocity);
 
@@ -303,14 +333,14 @@ public class Player : MonoBehaviour
     // flip sprite
     private void FlipSprite() 
     {
-        var horizontalMovement = Input.GetAxisRaw("Horizontal");
+        //var horizontalMovement = Input.GetAxisRaw("Horizontal");
         
         
-        if (horizontalMovement == 1)
+        if (horizontalInput == 1)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
-        else if (horizontalMovement == -1)
+        else if (horizontalInput == -1)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
@@ -525,6 +555,8 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawLine(groundRayA.position, groundRayA.position + Vector3.down * groundRayLength);
         Gizmos.DrawLine(groundRayB.position, groundRayB.position + Vector3.down * groundRayLength);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(slopeRay.position, slopeRay.position + Vector3.down * groundRayLength);
         //visualzied wall check ray
         Gizmos.color = Color.white;
         Gizmos.DrawLine(wallRay.position, wallRay.position + Vector3.right * wallRayLength * transform.localScale.x);
